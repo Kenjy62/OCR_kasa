@@ -1,3 +1,4 @@
+// Required
 import { useState } from "react";
 
 export default function Dropdown({ children, data }) {
@@ -18,7 +19,7 @@ export default function Dropdown({ children, data }) {
           {children}
         </div>
         {isOpen ? (
-          <div className="container-none p-4 bg-gray-200 rounded-bl-lg rounded-br-lg text-primaryOrange">
+          <div className="container-none p-4 bg-gray-100 rounded-bl-lg rounded-br-lg text-primaryOrange">
             {Array.isArray(data) ? (
               data.map((item, i) => (
                 <span key={i} className="block">

@@ -11,7 +11,7 @@ import Footer from "./components/footer";
 // Verify
 import Protected from "./pages/Protected";
 
-// pages
+// Pages
 import Home from "./pages/Home";
 import House from "./pages/House";
 import About from "./pages/About";

@@ -1,7 +1,10 @@
+// Components
+
 import Illustration from "../components/illustration";
 import Dropdown from "../components/dropdown";
 
 export default function About() {
+  // Page Text
   const fiability =
     "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.";
   const respect =

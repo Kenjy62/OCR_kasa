@@ -1,11 +1,15 @@
+// Required
+import { useParams } from "react-router-dom";
+
+// Components
 import Slider from "../components/slider";
 import Tag from "../components/tag";
-import { useParams } from "react-router-dom";
 import data from "../data/logements.json";
 import Stars from "../components/stars";
 import Dropdown from "../components/dropdown";
 
 export default function House() {
+  // Get House ID
   let { id } = useParams();
   let index = data.logement.find((item) => item.id === id);
 
@@ -18,7 +22,7 @@ export default function House() {
       <span className="block my-2 text-primaryOrange text-xl">
         {index.location}
       </span>
-      <div className="taglist flex flex-row gap-3 flex-wrap">
+      <div className="flex flex-row gap-3 flex-wrap">
         {index.tags.map((item, key) => {
           return <Tag key={key}>{item}</Tag>;
         })}
@@ -26,7 +30,11 @@ export default function House() {
       <div className="container-none flex justify-between items-center my-6">
         <Stars rating={parseInt(index.rating)} />
         <div className="infos flex flex-row-reverse justify-center items-center gap-2">
-          <img src={index.host.picture} className="rounded-full h-10 w-10" />
+          <img
+            src={index.host.picture}
+            alt={index.title}
+            className="rounded-full h-10 w-10"
+          />
           <span className="text-primaryOrange text-lg">{index.host.name}</span>
         </div>
       </div>

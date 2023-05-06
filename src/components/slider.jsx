@@ -1,4 +1,6 @@
+// Required
 import { useState } from "react";
+
 export default function Slider({ data }) {
   const [background, setBackground] = useState(data.pictures[0]);
   const [currentBg, setCurrentBg] = useState(0);

@@ -1,4 +1,8 @@
-import { useParams, Navigate } from "react-router-dom";
+// Required
+import { useParams } from "react-router-dom";
+
+import NotFound from "./404";
+// JSON Data
 import data from "../data/logements.json";
 
 export default function Protected({ children }) {
@@ -7,6 +11,6 @@ export default function Protected({ children }) {
   if (index) {
     return children;
   } else {
-    return <Navigate to="/404" />;
+    return <NotFound />;
   }
 }

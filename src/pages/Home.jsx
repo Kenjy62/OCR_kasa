@@ -1,6 +1,8 @@
+// Components
 import Illustration from "../components/illustration";
 import Thumb from "../components/thumb";
 
+// JSON Data
 import data from "../data/logements.json";
 
 export default function Home() {
@@ -12,7 +14,7 @@ export default function Home() {
             Chez vous, partout et ailleurs
           </Illustration>
         </div>
-        <div className="container-none w-full my-5 bg-lightGray rounded-lg flex gap-5 p-5 flex-wrap">
+        <div className="container-none w-full my-5 bg-gray-100 rounded-lg flex gap-5 p-5 flex-wrap">
           {data.logement.map((item, key) => (
             <Thumb key={key} item={item} />
           ))}
