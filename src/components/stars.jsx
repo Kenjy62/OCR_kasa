@@ -3,9 +3,13 @@ export default function Stars({ rating }) {
 
   for (let i = 0; i < 5; i++) {
     if (i < rating) {
-      list.push(<i class="fa-solid fa-star text-primaryOrange"></i>);
+      list.push(
+        <i key={i} className="fa-solid fa-star text-primaryOrange text-lg"></i>
+      );
     } else {
-      list.push(<i class="fa-solid fa-star text-gray-400"></i>);
+      list.push(
+        <i key={i} className="fa-solid fa-star text-gray-400 text-lg"></i>
+      );
     }
   }
 

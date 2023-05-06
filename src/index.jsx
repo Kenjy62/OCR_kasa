@@ -8,16 +8,19 @@ import "./index.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
+// Verify
 import Protected from "./pages/Protected";
 
 // pages
 import Home from "./pages/Home";
 import House from "./pages/House";
+import About from "./pages/About";
+import NotFound from "./pages/404";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -29,8 +32,8 @@ root.render(
             </Protected>
           }
         />
-        <Route path="/*" element={<h1>404</h1>} />
-        <Route path="/about" element={<h1>About</h1>} />
+        <Route path="/*" element={<NotFound />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </BrowserRouter>

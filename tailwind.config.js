@@ -9,6 +9,7 @@ module.exports = {
       },
       backgroundImage: {
         header: 'url("/src/assets/test.png")',
+        about: 'url("/src/assets/about.png")',
       },
     },
   },
