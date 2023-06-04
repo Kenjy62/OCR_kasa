@@ -28,7 +28,7 @@ export default function Slider({ data }) {
 
   return (
     <div
-      className="container-none h-52 bg-center rounded-lg flex flex-row justify-between items-center p-5 md:h-72 lg:h-80 xl:h-96"
+      className="container-none bg-cover h-52 bg-center rounded-lg flex flex-row justify-between items-center p-5 md:h-72 lg:h-80 xl:h-96"
       style={{ backgroundImage: `url(${background})` }}
     >
       {bgLenght > 0 ? (
@@ -37,13 +37,13 @@ export default function Slider({ data }) {
             className="text-3xl text-white"
             onClick={() => changeBg("decrement")}
           >
-            <i className="fa-solid fa-chevron-left"></i>
+            <i className="cursor-pointer fa-solid fa-chevron-left"></i>
           </div>
           <div
             className="text-2xl text-white"
             onClick={() => changeBg("increment")}
           >
-            <i className="fa-solid fa-chevron-right"></i>
+            <i className="cursor-pointer fa-solid fa-chevron-right"></i>
           </div>
         </>
       ) : null}

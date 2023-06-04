@@ -13,5 +13,5 @@ export default function Stars({ rating }) {
     }
   }
 
-  return <div className="star-rating">{list}</div>;
+  return <div className="star-rating flex flex-row justify-end">{list}</div>;
 }

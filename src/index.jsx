@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 
 // Components
+import Wrapper from "./components/wrapper";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
@@ -21,20 +22,22 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/house/:id"
-          element={
-            <Protected>
-              <House />
-            </Protected>
-          }
-        />
-        <Route path="/*" element={<NotFound />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <Wrapper>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/house/:id"
+            element={
+              <Protected>
+                <House />
+              </Protected>
+            }
+          />
+          <Route path="/*" element={<NotFound />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Wrapper>
       <Footer />
     </BrowserRouter>
   </React.StrictMode>
