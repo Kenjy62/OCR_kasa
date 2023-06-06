@@ -3,15 +3,11 @@ export default function Stars({ rating }) {
 
   for (let i = 0; i < 5; i++) {
     if (i < rating) {
-      list.push(
-        <i key={i} className="fa-solid fa-star text-primaryOrange text-lg"></i>
-      );
+      list.push(<i key={i} className="fa-solid fa-star star--active"></i>);
     } else {
-      list.push(
-        <i key={i} className="fa-solid fa-star text-gray-400 text-lg"></i>
-      );
+      list.push(<i key={i} className="fa-solid fa-star star--inactive"></i>);
     }
   }
 
-  return <div className="star-rating flex flex-row justify-end">{list}</div>;
+  return <div className="star--rating">{list}</div>;
 }

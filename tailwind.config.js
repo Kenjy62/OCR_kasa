@@ -7,10 +7,6 @@ module.exports = {
         primaryOrange: "#FF6060",
         lightGray: "#F6F6F6",
       },
-      backgroundImage: {
-        header: 'url("/src/assets/test.png")',
-        about: 'url("/src/assets/about.png")',
-      },
     },
   },
   plugins: [],

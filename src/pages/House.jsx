@@ -14,39 +14,29 @@ export default function House() {
   let index = data.logement.find((item) => item.id === id);
 
   return (
-    <div className="p-5 container-none flex flex-col gap-10">
+    <div className="house--container">
       <Slider data={index} />
 
-      <div className="flex flex-col md:flex-row justify-between">
-        <div className="flex flex-col">
-          <span className="block text-primaryOrange text-xl">
-            {index.title}
-          </span>
-          <span className="block text-primaryOrange text-md">
-            {index.location}
-          </span>
-          <div className="flex flex-row gap-3 flex-wrap my-4">
+      <div className="house--container--infos">
+        <div className="house--container--infos--logement">
+          <span>{index.title}</span>
+          <span>{index.location}</span>
+          <div className="house--container--infos--logement--tags">
             {index.tags.map((item, key) => {
               return <Tag key={key}>{item}</Tag>;
             })}
           </div>
         </div>
-        <div className="flex flex-row justify-between items-center md:flex-col-reverse md:justify-end gap-4">
+        <div className="house--container--infos--logement--user">
           <Stars rating={parseInt(index.rating)} />
-          <div className="infos flex flex-row-reverse justify-end items-center gap-2">
-            <img
-              src={index.host.picture}
-              alt={index.title}
-              className="rounded-full h-10 w-10"
-            />
-            <span className="text-primaryOrange text-lg">
-              {index.host.name}
-            </span>
+          <div className="house--container--infos--logement--user--infos">
+            <img src={index.host.picture} alt={index.title} />
+            <span>{index.host.name}</span>
           </div>
         </div>
       </div>
 
-      <div className="container-none flex flex-col gap-5 lg:flex-row xl:flex-row">
+      <div className="dropdown--container">
         <Dropdown data={index.description}>Description</Dropdown>
         <Dropdown data={index.equipments}>Equipements</Dropdown>
       </div>

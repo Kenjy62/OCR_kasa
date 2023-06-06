@@ -8,13 +8,13 @@ import data from "../data/logements.json";
 export default function Home() {
   return (
     <>
-      <div className="container-none p-5">
-        <div className="container-none w-full">
-          <Illustration type="bg-header h-[160px] lg:h-[220px] rounded-lg bg-cover bg-center">
+      <div className="main">
+        <div className="illustration--container">
+          <Illustration type="bg-header">
             Chez vous, partout et ailleurs
           </Illustration>
         </div>
-        <div className="container-none w-full my-5 bg-gray-100 rounded-lg flex gap-5 p-5 flex-wrap">
+        <div className="thumbs--container">
           {data.logement.map((item, key) => (
             <Thumb key={key} item={item} />
           ))}

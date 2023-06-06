@@ -16,12 +16,12 @@ export default function About() {
 
   return (
     <>
-      <div className="container-none p-5">
-        <div className="container-none w-full">
-          <Illustration type="bg-about h-[160px] lg:h-[220px] rounded-lg bg-cover bg-center">
+      <div className="about--container">
+        <div style={{ width: "100%" }}>
+          <Illustration type="bg-about">
             Chez vous, partout et ailleurs
           </Illustration>
-          <div className="container-none flex flex-col gap-4 py-5 lg:p-5 xl:p-5">
+          <div className="dropdown--list">
             <Dropdown data={fiability}>Fiabilité</Dropdown>
             <Dropdown data={respect}>Respect</Dropdown>
             <Dropdown data={service}>Service</Dropdown>
