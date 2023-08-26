@@ -32,5 +32,22 @@ Rework the Kasa platform and create the new website with React.
 >
 > JSON file for simulate Data from API
 
+
+# How to install
+In terminal : 
+
+```bash 
+git clone https://github.com/Kenjy62/OCR_kasa
+```
+```bash 
+cd OCR_kasa
+```
+```bash 
+npm install
+```
+```bash 
+npm start
+```
+
 <br>
 <font size="10"><p align="center"><a href="https://kenjy62.github.io/OCR_kasa">Démonstration</a></p></font>
